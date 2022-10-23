@@ -8,38 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var alarmClock: UILabel!
+    @IBOutlet private var alarmClock: UILabel!
     //    @IBOutlet weak var progressLine: UIProgressView!
-    @IBOutlet var slider: UISlider!
+    @IBOutlet private var slider: UISlider!
     
-    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet private var datePicker: UIDatePicker!
     
-    @IBOutlet var setAlarmButton: UIButton!
+    @IBOutlet private var setAlarmButton: UIButton!
     
-    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet private var timeLabel: UILabel!
     
-    @IBOutlet var switchButton: UISwitch!
+    @IBOutlet private var switchButton: UISwitch!
     
-    @IBOutlet var clearButton: UIButton!
+    @IBOutlet private var clearButton: UIButton!
     
-    @IBOutlet var progress: UIProgressView!
+    @IBOutlet private var progress: UIProgressView!
     
-    @IBOutlet var volumelevelText: UILabel!
+    @IBOutlet private var volumelevelText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slider.minimumValue = 0
-        slider.maximumValue = 100
-        slider.minimumTrackTintColor = .green
-        slider.maximumTrackTintColor = .gray
-        volumelevelText.text = String("Volume level \(Int(slider.value.rounded(.down)))% ")
-        
-        //        let timeLeft = datePicker.date
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        let formatteddate = formatter.string(from: Date())
-        timeLabel.text = formatteddate
-        progress.setProgress(0, animated: true)
+      main()
     }
     
     @IBAction func slider(_ sender: Any) {
@@ -48,17 +37,23 @@ class ViewController: UIViewController {
         volumelevelText.text = String("Volume level \(Int(slider.value.rounded(.down)))% ")
     }
     
-    @IBAction func datePicker(_ sender: UIDatePicker) {}
+    @IBAction private func datePicker(_ sender: UIDatePicker) {}
     
-    @IBAction func switchButton(_ sender: Any) {
+    @IBAction private func switchButton(_ sender: Any) {
         timeLabel.isHidden.toggle()
+        slider.isHidden.toggle()
+        datePicker.isHidden.toggle()
+        setAlarmButton.isHidden.toggle()
+        clearButton.isHidden.toggle()
+        progress.isHidden.toggle()
+        volumelevelText.isHidden.toggle()
     }
     
-    @IBAction func clearButton(_ sender: Any) {
+    @IBAction private func clearButton(_ sender: Any) {
         timeLabel.text = "00:00"
     }
     
-    @IBAction func setss(_ sender: Any) {
+    @IBAction private func setss(_ sender: Any) {
         let timeLeft = datePicker.date
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
@@ -66,4 +61,17 @@ class ViewController: UIViewController {
         timeLabel.text = formatteddate
     }
     
+    private func main () {
+        slider.minimumValue = 0
+        slider.maximumValue = 100
+        slider.minimumTrackTintColor = .green
+        slider.maximumTrackTintColor = .gray
+        volumelevelText.text = String("Volume level \(Int(slider.value.rounded(.down)))% ")
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        let formatteddate = formatter.string(from: Date())
+        timeLabel.text = formatteddate
+        progress.setProgress(0, animated: true)
+    }
 }
