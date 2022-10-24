@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="bw1-Qg-l1Z">
                                 <rect key="frame" x="20" y="97" width="350" height="682.66666666666663"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm clock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFd-xX-AOA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm clock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFd-xX-AOA">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="118.33333333333334" width="350" height="4"/>
                                     </progressView>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBD-q0-jGN">
-                                        <rect key="frame" x="0.0" y="157" width="350" height="216"/>
+                                        <rect key="frame" x="0.0" y="156.33333333333337" width="350" height="216"/>
                                         <connections>
                                             <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="nLu-iv-y0r"/>
                                         </connections>
