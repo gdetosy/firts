@@ -47,6 +47,10 @@ class ViewController: UIViewController {
         clearButton.isHidden.toggle()
         progress.isHidden.toggle()
         volumelevelText.isHidden.toggle()
+        if timeLabel.isHidden == true {
+            view.backgroundColor = .lightGray } else {
+                view.backgroundColor = .white
+            }
     }
     
     @IBAction private func clearButton(_ sender: Any) {
