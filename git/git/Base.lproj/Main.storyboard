@@ -40,8 +40,11 @@
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uol-PF-h6o">
                                         <rect key="frame" x="0.0" y="172.66666666666669" width="350" height="4"/>
                                     </progressView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBD-q0-jGN">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBD-q0-jGN">
                                         <rect key="frame" x="0.0" y="210.66666666666669" width="350" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="688406111.47157204">
+                                            <!--2022-10-25 15:55:11 +0000-->
+                                        </date>
                                         <connections>
                                             <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="nLu-iv-y0r"/>
                                         </connections>
